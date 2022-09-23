@@ -347,10 +347,39 @@ a {
   width: 25px;
 }
 
-@media screen and (max-width: 768px) {
+/* iPad Air & iPad Mini, Surface Pro 7 */
+@media screen and (max-width: 913px) {
+
+  .first-section.image {
+    height: 65%;
+  }
+
+  .box {
+    width: 800px;
+  }
+
+  .box-left, .box-right {
+    width: 370px;
+  }
+
+  .footer {
+    margin-bottom: 50px;
+  }
+
+  .content-footer {
+    width: 100%;
+  }
+  
+}
+
+@media screen and (max-width: 769px) {
+
+  .first-section.image {
+    height: 70%;
+  }
 
   .second-section {
-    height: 160vh;
+    height: 115vh;
   }
 
   .title {
@@ -362,7 +391,7 @@ a {
   }
 
   .box {
-    width: 700px;
+    width: 660px;
     height: 180px;
   }
 
@@ -400,10 +429,24 @@ a {
   }
 }
 
+@media screen and (max-width: 541px) {
+  .box {
+    width: 500px;
+  }
+
+  .box-left, .box-right {
+    width: 500px;
+  }
+
+  .content-footer {
+    width: 100%;
+  }
+}
+
 @media screen and (max-width: 426px) {
 
   .first-section.image {
-    height: 70%;
+    height: 40%;
   }
 
   .box {
@@ -421,15 +464,26 @@ a {
   .box-left, .box-right {
     height: 250px;
   }
+
+  .blur {
+    width: 390px;
+  }
+}
+
+@media screen and (max-width: 376px) {
 }
 
 @media screen and (max-width: 375px) {
+  
   .first-section.image {
-    height: 60%;
+    height: 35%;
   }
-
   .box-left, .box-right {
     height: 250px;
+  }
+
+  .title {
+    font-size: 2rem;
   }
   
 }
