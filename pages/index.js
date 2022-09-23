@@ -51,17 +51,17 @@ export default function Home() {
         </div>
         <div data-aos="fade-in" className='second-section'>
           <div className='first-box'>
-            <div className='box'>
+            <div className='box' style={{backgroundColor: darkMode ? "#1c1c1c" : "#F8F8F8"}}>
               <h1 className='title-box'>Enjoy activities with your friends</h1>
               <p>Why train yourself when you can do with your partner?</p>
             </div>
           </div>
           <div className='second-boxes'>
-            <div className='box-left'>
+            <div className='box-left' style={{backgroundColor: darkMode ? "#1c1c1c" : "#F8F8F8"}}>
               <h1 className='title-box'>0% Management Fees</h1>
               <p>Free of charge, finding your partner in activities is our first priority.</p>
             </div>
-            <div className='box-right'>
+            <div className='box-right' style={{backgroundColor: darkMode ? "#1c1c1c" : "#F8F8F8"}}>
               <h1 className='title-box'>Explore activites</h1>
               <p>You are free to explore and add activities that you like. Simply add them in our application.</p>
             </div>
