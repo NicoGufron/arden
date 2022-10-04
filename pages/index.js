@@ -80,8 +80,8 @@ export default function Home() {
           </div>
         </div>
         <FAQ status={{ darkMode }}></FAQ>
-        <div data-aos="zoom-out" className='video-section'>
-          <video className='video-display' src="/videos/video.mp4" controls></video>
+        <div className='video-section'>
+          <video data-aos="zoom-out" className='video-display' src="/videos/video.mp4" controls></video>
         </div>
         <div className='footer'>
           <div className='content-footer'>
