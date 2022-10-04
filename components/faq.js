@@ -5,15 +5,27 @@ import Typography from '@mui/material/Typography';
 
 import ChevronDown from '@heroicons/react/24/outline/ChevronDownIcon';
 
-function FAQ() {
+import React, { useEffect } from 'react';
+
+import Aos from 'aos';
+import "aos/dist/aos.css";
+
+function FAQ(props) {
+
+    const darkMode = props.status.darkMode;
+
+    useEffect(() => {
+        Aos.init({ duration: 1000 });
+    }, []);
+
     return (
         <div className='faq-section'>
-            <div className='content-section'>
+            <div data-aos="zoom-out" className='content-section'>
                 <h1 className='title'><span className='gradient-ardent'>FAQ</span></h1>
-                <h4 className='subtitle'>All of your questions will be answered right here</h4>
+                <h4 className='subtitle' style={{ color: darkMode ? "white" : "black" }}>All of your questions will be answered right here</h4>
                 <div className='accordions'>
-                    <Accordion>
-                        <AccordionSummary expandIcon={<ChevronDown />}>
+                    <Accordion style={{ backgroundColor: darkMode ? "#1c1c1c" : "#f8f8f8" }}>
+                        <AccordionSummary style={{ color: darkMode ? "white" : "black" }} expandIcon={<ChevronDown />}>
                             What is Arden?
                         </AccordionSummary>
                         <AccordionDetails>
@@ -22,16 +34,16 @@ function FAQ() {
                             </Typography>
                         </AccordionDetails>
                     </Accordion>
-                    <Accordion>
-                        <AccordionSummary>
+                    <Accordion style={{ backgroundColor: darkMode ? "#1c1c1c" : "#f8f8f8" }}>
+                        <AccordionSummary style={{ color: darkMode ? "white" : "black" }}>
                             What is the main feature in Arden?
                         </AccordionSummary>
                         <AccordionDetails>
                             <Typography>The main feature is Arden can find activities near you and match you with your partner so you can meet up and do activities together.</Typography>
                         </AccordionDetails>
                     </Accordion>
-                    <Accordion>
-                        <AccordionSummary>
+                    <Accordion style={{ backgroundColor: darkMode ? "#1c1c1c" : "#f8f8f8" }}>
+                        <AccordionSummary style={{ color: darkMode ? "white" : "black" }}>
                             Is Arden will be released in Android / iOS?
                         </AccordionSummary>
                         <AccordionDetails>
@@ -40,13 +52,13 @@ function FAQ() {
                             </Typography>
                         </AccordionDetails>
                     </Accordion>
-                    <Accordion>
-                        <AccordionSummary>
-                            What is Arden?
+                    <Accordion style={{ backgroundColor: darkMode ? "#1c1c1c" : "#f8f8f8" }}>
+                        <AccordionSummary style={{ color: darkMode ? "white" : "black" }}>
+                            Does Arden have match to earn function?
                         </AccordionSummary>
                         <AccordionDetails>
                             <Typography>
-                                Arden is something that you cannot see.
+                                Yes, it does. Simply match with your partner in activities, and Arden will automatically reward you in coins!
                             </Typography>
                         </AccordionDetails>
                     </Accordion>

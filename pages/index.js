@@ -2,16 +2,16 @@ import React, { useState, useEffect } from 'react';
 import FAQ from '../components/faq';
 import Aos from 'aos';
 import "aos/dist/aos.css";
+import Head from 'next/head';
 
 export default function Home() {
 
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState(false);
 
   function changeMode() {
     setDarkMode(!darkMode);
     if (darkMode) {
       document.body.style = 'background-color: white; color: #161616';
-
     } else {
       document.body.style = 'background-color: #161616; color: white';
     }
@@ -23,18 +23,25 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <title>Arden Labs</title>
+      </Head>
       <div className='wrapper'>
         <div className='navbar'>
-          <nav className='navbar-section' style={{ backgroundColor: darkMode ? "#161616" : "white" }}>
+          <nav className='navbar-section' style={{ backgroundColor: darkMode ? "rgb(22 22 22/.9)" : "white" }}>
             <div className='logo-section'>
-              <img className='logo-image' src={darkMode ? "/images/ardent-logo-white-bg.png" : "/images/ardent-logo-black-bg.png"}></img>
+              <img className='logo-image' src={darkMode ? "/images/ardent-logo-black-bg.png" : "/images/ardent-logo-white-bg.png"}></img>
               <h1 className='title-logo'>ARDEN</h1>
             </div>
+            <div className='cluster-links'>
+              <ul className='nav-links'>
+                <li className='nav-link'><a style={{ color: darkMode ? "white" : "#161616" }} href="">Home</a></li>
+                <li className='nav-link'><a style={{ color: darkMode ? "white" : "#161616" }} href="">Features</a></li>
+                <li className='nav-link'><a style={{ color: darkMode ? "white" : "#161616" }} href="">Products</a></li>
+                <li className='nav-link'><a style={{ color: darkMode ? "white" : "#161616" }} href="">FAQ</a></li>
+              </ul>
+            </div>
             <ul className='nav-links'>
-              <li className='nav-link'><a style={{ color: darkMode ? "white" : "#161616" }} href="">Home</a></li>
-              <li className='nav-link'><a style={{ color: darkMode ? "white" : "#161616" }} href="">Features</a></li>
-              <li className='nav-link'><a style={{ color: darkMode ? "white" : "#161616" }} href="">Gallery</a></li>
-              <li className='nav-link'><a style={{ color: darkMode ? "white" : "#161616" }} href="">FAQ</a></li>
               <li className='nav-link' id="darkMode">
                 <button className='dark-mode-button' style={{ backgroundColor: darkMode ? "#161616" : "white" }} onClick={changeMode}>
                   <img style={{ width: "16px", height: "16px" }} src={darkMode ? "images/night.png" : "images/day.png"}></img>
@@ -44,38 +51,42 @@ export default function Home() {
           </nav>
         </div>
         <div className='first-section'>
-          <img className='first-section image' src={darkMode ? "images/big-arden.png" : "images/big-arden-w.png"}></img>
-          <h1 data-aos="zoom-out" className='title'>Introducing <br></br><span className='gradient-ardent'>Arden</span></h1>
-          <h4 data-aos="zoom-out" className='subtitle'>A simple way where you can find your friend in different activities</h4>
-          <a href=""><button className='arden-button' style={{ color: darkMode ? "#1c1c1c" : "#f8f8f8" }}>Get Started</button></a>
-        </div>
-        <div data-aos="fade-in" className='second-section'>
-          <div className='first-box'>
-            <div className='box' style={{backgroundColor: darkMode ? "#1c1c1c" : "#F8F8F8"}}>
-              <h1 className='title-box'>Enjoy activities with your friends</h1>
-              <p>Why train yourself when you can do with your partner?</p>
-            </div>
-          </div>
-          <div className='second-boxes'>
-            <div className='box-left' style={{backgroundColor: darkMode ? "#1c1c1c" : "#F8F8F8"}}>
-              <h1 className='title-box'>0% Management Fees</h1>
-              <p>Free of charge, finding your partner in activities is our first priority.</p>
-            </div>
-            <div className='box-right' style={{backgroundColor: darkMode ? "#1c1c1c" : "#F8F8F8"}}>
-              <h1 className='title-box'>Explore activites</h1>
-              <p>You are free to explore and add activities that you like. Simply add them in our application.</p>
-            </div>
+          <div className='wrap-section'>
+            <img className='first-section image' src="/images/blur 1.png"></img>
+            <h1 data-aos="zoom-out" className='title'>Welcome to <br></br><span className='gradient-ardent'>Arden</span></h1>
+            <h4 data-aos="zoom-out" className='subtitle' style={{ color: darkMode ? "#f8f8f8" : "#1c1c1c" }}>We offer our newest product, where you can manage your activities and share with others to do activities together</h4>
+            <a href="#second"><button data-aos="zoom-out" className='arden-button'>Get Started</button></a>
           </div>
         </div>
-        {/* <FAQ></FAQ> */}
-        <div className='gallery-section'>
-          <h1 className='title'><span className='gradient-ardent'>Gallery</span></h1>
-          <h4 className='subtitle'>Our recent development in the application</h4>
+        <div data-aos="fade-in" className='second-section' id="second">
+          <div className='wrap-section'>
+            <h1 className='title second'>Never going <br></br>alone again</h1>
+            <div className='boxes'>
+              <div className='first-box' style={{ backgroundColor: darkMode ? "#1c1c1c" : "#f8f8f8" }}>
+                <h1 className='title' style={{ color: darkMode ? "white" : "black" }}>Enjoy activities with your friends</h1>
+                <p>Why train yourself when you can do with your partner?</p>
+              </div>
+              <div className='second-box'>
+                <div className='box-left' style={{ backgroundColor: darkMode ? "#1c1c1c" : "#f8f8f8" }}>
+                  <h1 className='title' style={{ color: darkMode ? "white" : "black" }}>0% Management Fees</h1>
+                  <p>Free of charge, finding your partner in activities is our first priority.</p>
+                </div>
+                <div className='box-right' style={{ backgroundColor: darkMode ? "#1c1c1c" : "#f8f8f8" }}>
+                  <h1 className='title' style={{ color: darkMode ? "white" : "black" }}>Explore activities</h1>
+                  <p>You are free to explore and add activities that you like. Simply add them in our application.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <FAQ status={{ darkMode }}></FAQ>
+        <div data-aos="zoom-out" className='video-section'>
+          <video className='video-display' src="/videos/video.mp4" controls></video>
         </div>
         <div className='footer'>
           <div className='content-footer'>
             <h1 className='title'>Learn More About <span className='gradient-ardent'>Arden</span></h1>
-            <h4 className='subtitle'> These are the links to help you more understand about Arden</h4>
+            <h4 className='subtitle' style={{ color: darkMode ? "#f8f8f8" : "#1c1c1c" }}> These are the links to help you more understand about Arden</h4>
             <div className='footer-buttons'>
               <a className='footer-links' href=""><div className='footer-button telegram'><img className='icon-logo' src="/images/telegram-white.png" />Join Telegram  ↗</div></a>
               <a className='footer-links' href=""><div className='footer-button telegram'><img className='icon-logo' src="/images/twitter-white.png" />Join Twitter  ↗</div></a>
