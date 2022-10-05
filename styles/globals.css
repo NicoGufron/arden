@@ -194,7 +194,7 @@ a {
 }
 
 .second-section {
-  padding-top: 7%;
+  padding-top: 35%;
   height: 120vh;
   text-align: center;
 }
@@ -467,6 +467,10 @@ a {
 
 /* iPad Air */
 @media screen and (max-width: 821px) {
+
+  .first-section.image {
+    height: 50%;
+  }
 
   .wrap-section .title {
     width: 75%;
