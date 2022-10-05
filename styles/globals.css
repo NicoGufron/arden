@@ -194,7 +194,7 @@ a {
 }
 
 .second-section {
-  padding-top: 35%;
+  padding-top: 7%;
   height: 120vh;
   text-align: center;
 }
@@ -521,6 +521,7 @@ a {
   }
 
   .second-section {
+    padding-top: 35%;
     height: 100vh;
   }
 
