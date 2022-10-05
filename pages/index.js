@@ -95,7 +95,7 @@ export default function Home() {
         </div>
         <FAQ status={{ darkMode }}></FAQ>
         <div class="video-section">
-          <video data-aos="zoom-out" class="video-display aos-init aos-animate" src="/videos/video.mp4" controls="controls"></video>
+          <video class="video-display aos-init aos-animate" src="/videos/video.mp4" controls="controls"></video>
         </div>
         <div className='footer'>
           <div className='content-footer'>
