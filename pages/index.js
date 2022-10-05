@@ -102,8 +102,8 @@ export default function Home() {
             <h1 className='title'>Learn More About <span className='gradient-ardent'>ARDEN</span></h1>
             <h4 className='subtitle' style={{ color: darkMode ? "#f8f8f8" : "#1c1c1c" }}> These are the links to help you more understand about Arden</h4>
             <div className='footer-buttons'>
-              <a className='footer-links' href=""><div className='footer-button telegram'><img className='icon-logo' src="/images/telegram-white.png" />Join Telegram  ↗</div></a>
-              <a className='footer-links' href=""><div className='footer-button telegram'><img className='icon-logo' src="/images/twitter-white.png" />Join Twitter  ↗</div></a>
+              <a className='footer-links' href="https://t.me/ardenlabs"><div className='footer-button telegram'><img className='icon-logo' src="/images/telegram-white.png" />Join Telegram  ↗</div></a>
+              <a className='footer-links' href="https://twitter.com/arden_labs"><div className='footer-button telegram'><img className='icon-logo' src="/images/twitter-white.png" />Join Twitter  ↗</div></a>
             </div>
           </div>
           <img className='blur' src="/images/blur.png"></img>
