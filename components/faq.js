@@ -22,7 +22,7 @@ function FAQ(props) {
         <div className='faq-section'>
             <div data-aos="zoom-out" className='content-section'>
                 <h1 className='title'><span className='gradient-ardent'>FAQ</span></h1>
-                <h4 className='subtitle' style={{ color: darkMode ? "white" : "black" }}>All of your questions will be answered right here</h4>
+                {/* <h4 className='subtitle' style={{ color: darkMode ? "white" : "black" }}>All of your questions will be answered right here</h4> */}
                 <div className='accordions'>
                     <Accordion style={{ backgroundColor: darkMode ? "#1c1c1c" : "#f8f8f8" }}>
                         <AccordionSummary style={{ color: darkMode ? "white" : "black" }} expandIcon={<ChevronDown />}>
@@ -30,7 +30,7 @@ function FAQ(props) {
                         </AccordionSummary>
                         <AccordionDetails>
                             <Typography>
-                                Arden is an application where you can find partners in activities such as sports, so you can do activities without going alone.
+                            Arden is a brand new social platform integrated with blockchain which based on users chosen sports and at the same time rewarding them with crypto coin.
                             </Typography>
                         </AccordionDetails>
                     </Accordion>
