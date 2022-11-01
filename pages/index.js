@@ -65,8 +65,8 @@ export default function Home() {
               <DrawerOverlay />
               <DrawerContent>
                 <DrawerCloseButton />
-                <DrawerHeader>Menu</DrawerHeader>
-                <DrawerBody>
+                <DrawerHeader bgColor={darkMode ? "rgb(28 28 28)" : "#F7FAFC"}>Menu</DrawerHeader>
+                <DrawerBody bgColor={darkMode ? "rgb(28 28 28)" : "#F7FAFC"}>
                   <ul className='navigation-drawer'>
                     <li className='nav-link drawer'><a onClick={onClose} href="#networks">Networks</a></li>
                     <li className='nav-link drawer'><a onClick={onClose} href="#">Features</a></li>
@@ -74,7 +74,9 @@ export default function Home() {
                     <li className='nav-link drawer'><a onClick={onClose} href="#faq">FAQs</a></li>
                   </ul>
                 </DrawerBody>
-                <DrawerFooter></DrawerFooter>
+                <DrawerFooter bgColor={darkMode ? "rgb(28 28 28)" : "#F7FAFC"}>
+                <IconButton _hover={{ bgColor: darkMode ? "" : "" }} onClick={changeMode} bgColor={darkMode ? "#262626" : "#F7FAFC"} icon={darkMode ? <HiOutlineSun /> : <HiMoon />}></IconButton>
+                </DrawerFooter>
               </DrawerContent>
             </Drawer>
           </Flex>
